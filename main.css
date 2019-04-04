@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding:0;
+}
+
+body {
+    width: auto;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    background: url('img/bbq_background.jpg');
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    top: 10%;
+    color: white;
+    text-shadow: 1px 1px black ;
+}
+
+#search {
+    text-align: center;
+    position: relative;
+    top: 25%;
+    width: 80%;
+    margin: auto;
+}
+
+input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  #btn {
+    width: 20%;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 100%;
+    cursor: pointer;
+    background-color: #58799B;
+    color: white;
+    border: solid #000000 2px;
+    box-shadow: 1px 2px black;
+    text-shadow: 1px 1px black ;
+  }
+
+  #output {
+    margin: auto;
+    position: relative;
+    top: 35%;
+    color: black;
+    background-color: rgba(245, 245,245, 0.8);
+    border: 1px solid grey;
+    width: 60%;
+    text-align: center;
+    padding: 10px;
+    display: none;
+    margin-bottom: 10px;
+  }
+
+  #date {
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #output img {
+      height: 50px;
+      width: 50px;
+  }
+
+  #answer {
+      position: relative;
+      top: 15%;
+      font-size: 3.5em;
+      text-align: center;
+      font-weight: bold;
+  }
