@@ -1,10 +1,24 @@
 document.querySelector('#btn').addEventListener('click', fetchFunction);
 
+
 function getUrl() {
     let location = document.getElementById('getLocation').value
-    let url = `http://api.apixu.com/v1/forecast.json?key=c03a1c43ebd94ad59eb80153190204&q=${location}&days=1`;
+    let url = `https://api.apixu.com/v1/forecast.json?key=c03a1c43ebd94ad59eb80153190204&q=${location}&days=1`;
     return url;
 }
+
+let answer = document.getElementById('answer');
+let output = document.getElementById('output');
+
+// function reset(){
+// if (output.style = 'block') {
+//     output.outerHTML = '';
+//     fetchFunction();
+// } else {
+//     fetchFunction();
+// }
+
+// }
 
 function fetchFunction() {
     fetch(getUrl())
@@ -37,14 +51,15 @@ function fetchFunction() {
             let precipitation = data.forecast.forecastday[0].day.totalprecip_mm;
             document.getElementById('precipitation').append(`${precipitation} mm of rain` );
 
+
             if (maxTemp > 20 && precipitation <= 0.1) {
-                document.getElementById('answer').innerHTML = "Yes!";
-                document.getElementById('answer').style.color = 'green';
-                document.getElementById('output').style.display = 'block'
+                answer.innerHTML = "Yes!";
+                answer.style.color = 'green';
+                output.style.display = 'block'
             } else {
-                document.getElementById('answer').innerHTML = "No!";
-                document.getElementById('answer').style.color = 'red';
-                document.getElementById('output').style.display = 'block'
+                answer.innerHTML = "No!";
+                answer.style.color = 'red';
+                output.style.display = 'block'
             }
 
 
