@@ -13,6 +13,7 @@ btn.addEventListener('click', () => {
 });
 
 
+
 function getUrl() {
     let location = document.getElementById('getLocation').value;
     let url = `https://api.apixu.com/v1/forecast.json?key=c03a1c43ebd94ad59eb80153190204&q=${location}&days=1`;
@@ -47,6 +48,16 @@ let outputData = (data) => {
     let countryData = JSON.stringify(data.location.country);
     cityData = cityData.replace(/\"/g, "");
     countryData = countryData.replace(/\"/g, "");
+
+    // const checkLocations = JSON.stringify(data.location.name);
+
+
+
+    //     if (checkLocations.length > 1) {
+    //        console.log(Object.keys(checkLocations))
+    //     } 
+
+
     document.getElementById("location").append(`${cityData}, ${countryData}`);
 
     const dateOptions = {
