@@ -11,6 +11,12 @@ body {
     background-size: cover;
 }
 
+@media (max-width:640px) {
+  body{
+    background-attachment:initial;
+  }
+}
+
 h1 {
     text-align: center;
     position: relative;
