@@ -25,7 +25,13 @@ let output = document.getElementById('output');
 
 
 function fetchFunction() {
-    fetch(getUrl())
+
+    let fetchData = { 
+        method: 'POST'
+      }
+
+    fetch(getUrl(),fetchData)
+    
         .then(response => response.json())
         .then(data => {
             outputData(data);
