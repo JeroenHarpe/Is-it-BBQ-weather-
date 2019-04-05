@@ -72,7 +72,7 @@ let outputData = (data) => {
 
     let icon = data.forecast.forecastday[0].day.condition.icon;
     let getImg = document.getElementById('icon');
-    getImg.src = `http:${icon}`;
+    getImg.src = `https:${icon}`;
 
     let maxTemp = data.forecast.forecastday[0].day.maxtemp_c;
     document.getElementById('maxTemp').append(`${maxTemp} °C`);
