@@ -17,6 +17,7 @@ h1 {
     top: 10%;
     color: white;
     text-shadow: 1px 1px black ;
+    margin: 0 5px;
 }
 
 #search {
@@ -86,4 +87,7 @@ input {
       font-size: 3.5em;
       text-align: center;
       font-weight: bold;
+      background: rgba(0, 0, 0, 0.7);
+      width: 35%;
+      margin: auto;
   }
