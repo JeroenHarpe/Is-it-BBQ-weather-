@@ -45,8 +45,8 @@ input {
     cursor: pointer;
     background-color: #58799B;
     color: white;
-    border: solid #000000 2px;
-    box-shadow: 1px 2px black;
+    border: solid lightsteelblue 2px;
+    /* box-shadow: 1px 2px black; */
     text-shadow: 1px 1px black ;
   }
 

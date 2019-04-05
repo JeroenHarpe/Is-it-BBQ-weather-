@@ -1,11 +1,20 @@
-document.querySelector('#btn').addEventListener('click', () => {
+const btn = document.getElementById("btn");
+getLocation.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   resetData();
+   fetchFunction();
+  }
+});
+
+
+btn.addEventListener('click', () => {
     resetData();
     fetchFunction();
 });
 
 
 function getUrl() {
-    let location = document.getElementById('getLocation').value
+    let location = document.getElementById('getLocation').value;
     let url = `https://api.apixu.com/v1/forecast.json?key=c03a1c43ebd94ad59eb80153190204&q=${location}&days=1`;
     return url;
 }
@@ -13,15 +22,6 @@ function getUrl() {
 let answer = document.getElementById('answer');
 let output = document.getElementById('output');
 
-// function reset(){
-// if (output.style = 'block') {
-//     output.outerHTML = '';
-//     fetchFunction();
-// } else {
-//     fetchFunction();
-// }
-
-// }
 
 function fetchFunction() {
     fetch(getUrl())
