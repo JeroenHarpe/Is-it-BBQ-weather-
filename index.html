@@ -34,7 +34,10 @@
     <h1>Is it BBQ weather today?</h1>
     <div id="answer"></div>
     <div id="search">
-        <input id="getLocation" type="text" placeholder="Enter your city">
+        <div class="tooltip">
+            <span class="tooltiptext">Minimum of 3 letters required</span>
+        <input id="getLocation" type="text" placeholder="Enter your city" required>
+        </div>  
         <button id="btn">Search</button>
     </div>
     <div id="output">

@@ -1,16 +1,30 @@
+function formValidation() {
+
+    const inputField = document.getElementById('getLocation').value
+
+    if (inputField.length < 3) {
+        const tooltip = document.querySelector('.tooltip');
+        const tooltiptext = document.querySelector('.tooltiptext');
+        tooltip.style.visibility = "visible";
+        tooltiptext.style.visibility = "visible";
+    }
+}
+
 const btn = document.getElementById("btn");
-getLocation.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-   resetData();
-   fetchFunction();
-  }
+getLocation.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        formValidation();
+        resetData();
+        fetchFunction();
+    }
 });
 
-
 btn.addEventListener('click', () => {
+    formValidation();
     resetData();
     fetchFunction();
 });
+
 
 
 
@@ -26,12 +40,16 @@ let output = document.getElementById('output');
 
 function fetchFunction() {
 
-    let fetchData = { 
-        method: 'POST'
-      }
+    let fetchData = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        
+    }
 
-    fetch(getUrl(),fetchData)
-    
+    fetch(getUrl(), fetchData)
+
         .then(response => response.json())
         .then(data => {
             outputData(data);

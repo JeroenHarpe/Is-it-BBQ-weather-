@@ -10,7 +10,9 @@ body {
     font-family: 'Ubuntu', sans-serif;
     background: url('img/bbq_background.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     min-height: 100%;
+
 }
 
 @media (max-width:640px) {
@@ -54,9 +56,17 @@ input {
     cursor: pointer;
     background-color: #58799B;
     color: white;
-    border: solid lightsteelblue 2px;
+    border: solid lightsteelblue 1px;
+    border-radius: 5px;
     text-shadow: 1px 1px black ;
     margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.9;
+  }
+
+  #btn:hover {
+    opacity: 1;
+    border: solid lightsteelblue 2px;
   }
 
   @media screen and (max-width: 600px) {
@@ -110,4 +120,39 @@ input {
       background: rgba(0, 0, 0, 0.7);
       width: 35%;
       margin: auto;
+  }
+
+   .tooltip {
+    position: relative;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    text-align: center;
+    margin: auto;
+  }
+
+  @media screen and (max-width: 475px) {
+    .tooltip {
+      font-size: 0.8em;
+    }
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
   }
