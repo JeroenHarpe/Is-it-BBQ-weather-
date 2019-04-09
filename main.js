@@ -1,4 +1,3 @@
-import 'whatwg-fetch'
 
 
 function formValidation() {
