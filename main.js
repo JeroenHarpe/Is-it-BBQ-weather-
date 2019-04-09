@@ -1,3 +1,6 @@
+import 'whatwg-fetch'
+
+
 function formValidation() {
 
     const inputField = document.getElementById('getLocation').value
